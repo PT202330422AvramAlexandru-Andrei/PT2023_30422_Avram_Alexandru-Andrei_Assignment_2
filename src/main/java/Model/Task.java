@@ -11,6 +11,9 @@ public class Task {
         this.serviceTime = serviceTime;
     }
 
+    public Task() {
+    }
+
     public Integer getId() {
         return id;
     }
@@ -34,4 +37,5 @@ public class Task {
     public void setServiceTime(Integer serviceTime) {
         this.serviceTime = serviceTime;
     }
+
 }

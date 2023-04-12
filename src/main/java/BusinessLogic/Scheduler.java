@@ -3,13 +3,15 @@ package BusinessLogic;
 import Model.Server;
 import Model.Task;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Scheduler {
-    private List<Server> servers;
+    private List<Server> servers = Collections.synchronizedList(new ArrayList<Server>());
     private Integer maxNoServers;
     private Integer maxTasksPerServer;
-    private Strategy strategy;
+    private Strategy strategy = new ConcreteStrategyQueue();
 
     public Scheduler(List<Server> servers, Integer maxNoServers, Integer maxTasksPerServer, Strategy strategy) {
         this.servers = servers;
@@ -23,8 +25,12 @@ public class Scheduler {
         // -create a new server object
         // -create a new thread for the object
 
-        Server server = new Server();
-        Thread thread = new Thread(server);
+        for (int i = 0; i < maxNoServers; i++) {
+            Server server = new Server();
+            servers.add(server);
+            Thread thread = new Thread(server);
+            thread.start();
+        }
     }
 
     public void changeStrategy(SelectionPolicy policy) {
