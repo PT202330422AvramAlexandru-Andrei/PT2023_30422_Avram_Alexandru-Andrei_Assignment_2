@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a003ef96-67b7-48d5-b95f-dcb9d032bd0e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BusinessLogic/Scheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BusinessLogic/Scheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BusinessLogic/SimulationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BusinessLogic/SimulationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/SimulationFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/SimulationFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/queuemanager/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/queuemanager/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/queuemanager/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/queuemanager/view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,5 +62,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.ConcurrentModificationException" package="java.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class SimulationManager implements Runnable{
 
@@ -17,7 +18,7 @@ public class SimulationManager implements Runnable{
     public int minProcessingTime = 2;
     public int numberOfServers = 3;
     public int numberOfClients = 100;
-    public SelectionPolicy selectionPolicy = SelectionPolicy.SHORTEST_TIME;
+    public SelectionPolicy selectionPolicy = SelectionPolicy.SHORTEST_QUEUE;
 
     //entity responsible for queue management and client distribution
     private Scheduler scheduler = new Scheduler(numberOfServers, 5);
@@ -26,7 +27,7 @@ public class SimulationManager implements Runnable{
     private SimulationFrame frame;
 
     //pool of tasks to be processed
-    private List<Task> generatedTasks = Collections.synchronizedList(new ArrayList<>());
+    private List<Task> generatedTasks = Collections.synchronizedList(new CopyOnWriteArrayList<>());
 
     public SimulationManager() {
         //initialize the scheduler
@@ -60,7 +61,7 @@ public class SimulationManager implements Runnable{
             Task task = new Task();
             task.setServiceTime((int) (Math.random() * (maxProcessingTime - minProcessingTime) + minProcessingTime));
             //change 10 to timeLimit after testing
-            task.setArrivalTime((int) ((Math.random() * 100) % 10));
+            task.setArrivalTime((int) ((Math.random() * 100) % timeLimit));
             task.setId(i);
             generatedTasks.add(task);
         }
@@ -87,6 +88,7 @@ public class SimulationManager implements Runnable{
                     scheduler.dispatchTask(task);
                     generatedTasks.remove(task);
                     System.out.println("Task " + task.getId() + " arrived at " + task.getArrivalTime() + " and has a service time of " + task.getServiceTime());
+                    System.out.println("Thread: " + Thread.currentThread().getName());
 
                 }
                 //iterator.remove();
