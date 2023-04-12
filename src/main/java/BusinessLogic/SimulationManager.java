@@ -26,7 +26,7 @@ public class SimulationManager implements Runnable{
 
     public SimulationManager() {
         //initialize the scheduler
-        //  -create and start numberOfSerbers threads
+        //  -create and start numberOfServers threads
         //  -initialize selection strategy => createStrategy()
         //initialize the frame
         //generate nrOfClients clients => generateNRandomTasks()
