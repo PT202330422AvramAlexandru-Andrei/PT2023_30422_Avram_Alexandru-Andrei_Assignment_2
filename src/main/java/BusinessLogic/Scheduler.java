@@ -20,7 +20,7 @@ public class Scheduler {
         this.strategy = strategy;
     }
 
-    public Scheduler(int maxNoServers, int maxTasksPerServer) {
+    public Scheduler(int maxNoServers) {
         //for max nr of servers
         // -create a new server object
         // -create a new thread for the object
@@ -45,8 +45,11 @@ public class Scheduler {
         }
     }
 
-    public void dispatchTask(Task task) {
+    public synchronized void dispatchTask(Task task) {
         strategy.addTask(servers, task);
+
+        System.out.println("Thread: " + Thread.currentThread().getName());
+
     }
 
     public List<Server> getServers() {

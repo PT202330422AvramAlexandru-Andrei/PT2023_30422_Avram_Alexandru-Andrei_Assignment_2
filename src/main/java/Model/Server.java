@@ -1,19 +1,17 @@
 package Model;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.concurrent.BlockingDeque;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Server implements Runnable {
-    private BlockingDeque<Task> tasks = new LinkedBlockingDeque<>();
+    private BlockingDeque<Task> tasks;
     private AtomicInteger waitingPeriod;
 
-    public Server(BlockingDeque<Task> tasks, AtomicInteger waitingPeriod) {
+    /*public Server(BlockingDeque<Task> tasks, AtomicInteger waitingPeriod) {
         this.tasks = tasks;
         this.waitingPeriod = waitingPeriod;
-    }
+    }*/
 
     public Server() {
         //initialize queue and waiting period
@@ -21,15 +19,15 @@ public class Server implements Runnable {
         this.waitingPeriod = new AtomicInteger(0);
     }
 
-    public void addTask(Task task) {
+    public synchronized void addTask(Task task) {
         //add task to queue and update waiting period
         tasks.add(task);
         waitingPeriod.addAndGet(task.getServiceTime());
     }
 
-    public void removeTask() {
+    /*public void removeTask() {
         tasks.remove();
-    }
+    }*/
 
     public BlockingDeque<Task> getTasks() {
         return tasks;

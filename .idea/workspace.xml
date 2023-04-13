@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a003ef96-67b7-48d5-b95f-dcb9d032bd0e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BusinessLogic/ConcreteStrategyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BusinessLogic/ConcreteStrategyQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BusinessLogic/Scheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BusinessLogic/Scheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BusinessLogic/SimulationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BusinessLogic/SimulationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

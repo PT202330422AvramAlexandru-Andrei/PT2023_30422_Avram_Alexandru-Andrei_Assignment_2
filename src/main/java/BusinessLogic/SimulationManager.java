@@ -4,11 +4,7 @@ import GUI.SimulationFrame;
 import Model.Server;
 import Model.Task;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.*;
 
 public class SimulationManager implements Runnable{
 
@@ -17,28 +13,29 @@ public class SimulationManager implements Runnable{
     public int maxProcessingTime = 10;
     public int minProcessingTime = 2;
     public int numberOfServers = 3;
-    public int numberOfClients = 100;
+    public int numberOfTasks = 100;
     public SelectionPolicy selectionPolicy = SelectionPolicy.SHORTEST_QUEUE;
 
     //entity responsible for queue management and client distribution
-    private Scheduler scheduler = new Scheduler(numberOfServers, 5);
+    private Scheduler scheduler;
 
     //frame for displaying the simulation
     private SimulationFrame frame;
 
     //pool of tasks to be processed
-    private List<Task> generatedTasks = Collections.synchronizedList(new CopyOnWriteArrayList<>());
+    private List<Task> generatedTasks = Collections.synchronizedList(new ArrayList<>());
 
     public SimulationManager() {
         //initialize the scheduler
-        Scheduler scheduler = new Scheduler(numberOfServers, 5);
+        scheduler = new Scheduler(numberOfServers);
 
         //  -create and start numberOfServers threads
-        for (int i = 0; i < numberOfServers; i++) {
-            Server server = new Server();
-            Thread thread = new Thread(server);
+        //===========================================//
+        /*for (int i = 0; i < numberOfServers; i++) {
+            Thread thread = new Thread();
             thread.start();
-        }
+        }*/
+        //===========================================//
 
         //  -initialize selection strategy => createStrategy()
         scheduler.changeStrategy(selectionPolicy);
@@ -66,7 +63,7 @@ public class SimulationManager implements Runnable{
             generatedTasks.add(task);
         }
 
-        generatedTasks.sort((o1, o2) -> o1.getArrivalTime() - o2.getArrivalTime());
+        generatedTasks.sort(Comparator.comparingInt(Task::getArrivalTime));
         System.out.println("Generated tasks: " + generatedTasks.size());
     }
 
@@ -81,25 +78,27 @@ public class SimulationManager implements Runnable{
             //  -remove task from list
             //update the UI frame => frame.update()
 
-            Iterator<Task> iterator = generatedTasks.iterator();
-            while (iterator.hasNext()) {
-                Task task = iterator.next();
-                if (task.getArrivalTime() == currentTime) {
-                    scheduler.dispatchTask(task);
-                    generatedTasks.remove(task);
-                    System.out.println("Task " + task.getId() + " arrived at " + task.getArrivalTime() + " and has a service time of " + task.getServiceTime());
-                    System.out.println("Thread: " + Thread.currentThread().getName());
+            synchronized (generatedTasks) {
+                Iterator<Task> iterator = generatedTasks.iterator();
+                while (iterator.hasNext()) {
+                    Task task = iterator.next();
+                    if (task.getArrivalTime() == currentTime) {
+                        scheduler.dispatchTask(task);
+                        //generatedTasks.remove(task);
+                        iterator.remove();
+                        System.out.println("Task " + task.getId() + " arrived at " + task.getArrivalTime() + " and has a service time of " + task.getServiceTime());
 
+                    }
+                    //iterator.remove();
+                    //frame.update();
                 }
-                //iterator.remove();
-                //frame.update();
             }
 
             currentTime++;
             System.out.println("Current time: " + currentTime);
             //wait for 1 second
             try {
-                Thread.sleep(1000);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
