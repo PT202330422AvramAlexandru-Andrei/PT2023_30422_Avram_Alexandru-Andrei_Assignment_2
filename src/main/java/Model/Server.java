@@ -19,7 +19,7 @@ public class Server implements Runnable {
         this.waitingPeriod = new AtomicInteger(0);
     }
 
-    public synchronized void addTask(Task task) {
+    public void addTask(Task task) {
         //add task to queue and update waiting period
         tasks.add(task);
         waitingPeriod.addAndGet(task.getServiceTime());
@@ -47,21 +47,20 @@ public class Server implements Runnable {
 
     @Override
     public void run() {
-        while(true) {
-            // take next task from queue
-            Task task = tasks.peek();
-
-            if (task == null) {
-                continue;
-            }
-            // wait for service time
+        while (!Thread.currentThread().isInterrupted()) {
             try {
+                if (tasks.isEmpty()) {
+                    Thread.sleep(1000);
+                    continue;
+                }
+
+                Task task = tasks.peek();
                 Thread.sleep(task.getServiceTime() * 1000);
+                tasks.take();
+                waitingPeriod.addAndGet(-task.getServiceTime());
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                Thread.currentThread().interrupt();
             }
-            // update waiting period
-            waitingPeriod.addAndGet(-task.getServiceTime());
         }
     }
 }

@@ -38,7 +38,7 @@ public class SimulationManager implements Runnable{
         //===========================================//
 
         //  -initialize selection strategy => createStrategy()
-        scheduler.changeStrategy(selectionPolicy);
+        //scheduler.changeStrategy(selectionPolicy);
 
         //initialize the frame
         frame = new SimulationFrame();
@@ -58,7 +58,7 @@ public class SimulationManager implements Runnable{
             Task task = new Task();
             task.setServiceTime((int) (Math.random() * (maxProcessingTime - minProcessingTime) + minProcessingTime));
             //change 10 to timeLimit after testing
-            task.setArrivalTime((int) ((Math.random() * 100) % timeLimit));
+            task.setArrivalTime((int) ((Math.random() * 100) % 10));
             task.setId(i);
             generatedTasks.add(task);
         }
@@ -84,18 +84,22 @@ public class SimulationManager implements Runnable{
                     Task task = iterator.next();
                     if (task.getArrivalTime() == currentTime) {
                         scheduler.dispatchTask(task);
+                        //System.out.println("Generated tasks: " + generatedTasks.stream().toString());
                         //generatedTasks.remove(task);
                         iterator.remove();
-                        System.out.println("Task " + task.getId() + " arrived at " + task.getArrivalTime() + " and has a service time of " + task.getServiceTime());
-
+                        //System.out.println("Task " + task.getId() + " arrived at " + task.getArrivalTime() + " and has a service time of " + task.getServiceTime());
+                        //System.out.println("Thread: " + Thread.currentThread().getName());
                     }
                     //iterator.remove();
                     //frame.update();
                 }
+                scheduler.printQueues();
             }
 
             currentTime++;
+            System.out.println("============");
             System.out.println("Current time: " + currentTime);
+            System.out.println("============");
             //wait for 1 second
             try {
                 Thread.sleep(100);

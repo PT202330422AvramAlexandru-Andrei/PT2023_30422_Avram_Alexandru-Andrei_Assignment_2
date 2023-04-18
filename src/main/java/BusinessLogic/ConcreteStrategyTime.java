@@ -6,13 +6,21 @@ import Model.Task;
 import java.util.List;
 
 public class ConcreteStrategyTime implements Strategy{
+
     @Override
     public void addTask(List<Server> servers, Task task) {
-        for (Server server : servers) {
-            if (server.getTasks().size() < 5) {
-                server.addTask(task);
-                break;
+        Server server = selectServer(servers);
+        server.addTask(task);
+    }
+
+    @Override
+    public Server selectServer(List<Server> servers) {
+        Server server = servers.get(0);
+        for (Server s : servers) {
+            if (s.getTasks().size() < server.getTasks().size()) {
+                server = s;
             }
         }
+        return server;
     }
 }

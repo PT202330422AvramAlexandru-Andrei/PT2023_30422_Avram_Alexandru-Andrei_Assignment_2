@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Scheduler {
-    private List<Server> servers = Collections.synchronizedList(new ArrayList<Server>());
+    private List<Server> servers = Collections.synchronizedList(new ArrayList<>());
     private Integer maxNoServers;
     private Integer maxTasksPerServer;
     private Strategy strategy = new ConcreteStrategyQueue();
@@ -46,13 +46,28 @@ public class Scheduler {
     }
 
     public synchronized void dispatchTask(Task task) {
-        strategy.addTask(servers, task);
+        Server selectedServer = strategy.selectServer(servers);
+        selectedServer.addTask(task);
 
-        System.out.println("Thread: " + Thread.currentThread().getName());
+        //System.out.println("Thread: " + Thread.currentThread().getName());
 
     }
 
     public List<Server> getServers() {
         return servers;
+    }
+
+    public void printQueues() {
+        for (Server s : servers) {
+            if (s.getTasks().size() > 0) {
+                System.out.println("Queue for server " + servers.indexOf(s) + ": ");
+                for (Task t : s.getTasks()) {
+                    System.out.println(t.getId());
+                }
+                System.out.println();
+            }else {
+                System.out.println("Queue for server " + servers.indexOf(s) + ": empty");
+            }
+        }
     }
 }

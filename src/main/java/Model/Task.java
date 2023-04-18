@@ -38,4 +38,12 @@ public class Task {
         this.serviceTime = serviceTime;
     }
 
+    @Override
+    public String toString() {
+        return "Task{" +
+                "id=" + id +
+                ", arrivalTime=" + arrivalTime +
+                ", serviceTime=" + serviceTime +
+                '}';
+    }
 }
