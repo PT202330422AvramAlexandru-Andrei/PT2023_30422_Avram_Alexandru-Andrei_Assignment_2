@@ -61,12 +61,15 @@ public class Scheduler {
         for (Server s : servers) {
             if (s.getTasks().size() > 0) {
                 System.out.println("Queue for server " + servers.indexOf(s) + ": ");
+                FileWrite.write("output.txt", "\nQueue for server " + servers.indexOf(s) + ": ");
                 for (Task t : s.getTasks()) {
                     System.out.println(t.getId());
+                    FileWrite.write("output.txt", t.getId() + "  ");
                 }
                 System.out.println();
             }else {
                 System.out.println("Queue for server " + servers.indexOf(s) + ": empty");
+                FileWrite.write("output.txt", "\nQueue for server " + servers.indexOf(s) + ": empty");
             }
         }
     }

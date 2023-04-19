@@ -47,6 +47,20 @@ public class SimulationManager implements Runnable{
         generateNRandomTasks();
     }
 
+    public SimulationManager(int timeLimit, int maxProcessingTime, int minProcessingTime, int numberOfServers) {
+        this.timeLimit = timeLimit;
+        this.maxProcessingTime = maxProcessingTime;
+        this.minProcessingTime = minProcessingTime;
+        this.numberOfServers = numberOfServers;
+        this.numberOfTasks = numberOfTasks;
+        this.selectionPolicy = selectionPolicy;
+
+        scheduler = new Scheduler(numberOfServers);
+
+        frame = new SimulationFrame();
+        generateNRandomTasks();
+    }
+
     public void generateNRandomTasks() {
         //generate N random tasks
         //  -random processing time
@@ -65,11 +79,12 @@ public class SimulationManager implements Runnable{
 
         generatedTasks.sort(Comparator.comparingInt(Task::getArrivalTime));
         System.out.println("Generated tasks: " + generatedTasks.size());
+        FileWrite.write("output.txt", "Generated tasks: " + generatedTasks.size() + "\n");
     }
 
     @Override
     public void run() {
-
+        FileWrite.emptyFile("output.txt");
         int currentTime = 0;
         while (currentTime < timeLimit) {
             //iterate through the list of tasks (generatedTasks)
@@ -80,11 +95,12 @@ public class SimulationManager implements Runnable{
 
             synchronized (generatedTasks) {
                 Iterator<Task> iterator = generatedTasks.iterator();
+                System.out.println("Waiting tasks: " + generatedTasks.toString());
+                FileWrite.write("output.txt", "Waiting tasks: " + generatedTasks.toString() + "\n");
                 while (iterator.hasNext()) {
                     Task task = iterator.next();
                     if (task.getArrivalTime() == currentTime) {
                         scheduler.dispatchTask(task);
-                        //System.out.println("Generated tasks: " + generatedTasks.stream().toString());
                         //generatedTasks.remove(task);
                         iterator.remove();
                         //System.out.println("Task " + task.getId() + " arrived at " + task.getArrivalTime() + " and has a service time of " + task.getServiceTime());
@@ -97,12 +113,15 @@ public class SimulationManager implements Runnable{
             }
 
             currentTime++;
-            System.out.println("============");
+            System.out.println("==================");
             System.out.println("Current time: " + currentTime);
-            System.out.println("============");
+            System.out.println("==================");
+            FileWrite.write("output.txt", "\n\n==================\n");
+            FileWrite.write("output.txt", "Current time: " + currentTime + "\n");
+            FileWrite.write("output.txt", "==================\n");
             //wait for 1 second
             try {
-                Thread.sleep(100);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

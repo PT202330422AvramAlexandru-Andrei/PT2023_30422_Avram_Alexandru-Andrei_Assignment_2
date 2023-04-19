@@ -2,6 +2,7 @@ package com.example.queuemanager;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -10,8 +11,9 @@ import java.io.IOException;
 public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        //System.out.println(getClass().getResource("/view.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view.fxml"));
+        Scene scene = new Scene(root, 600, 350);
         stage.setTitle("Queue Manager");
         stage.setScene(scene);
         stage.show();
