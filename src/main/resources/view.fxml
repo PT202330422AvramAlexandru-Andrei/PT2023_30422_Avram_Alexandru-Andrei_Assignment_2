@@ -27,5 +27,5 @@
     <TextField fx:id="numServersTextField" text="3" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
 
 
-    <Button text="Start Simulation" GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.halignment="RIGHT" onAction="#handleStartSimulation"/>
+    <Button fx:id="toQueues" text="Start Simulation" GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.halignment="RIGHT" onAction="#handleStartSimulation"/>
 </GridPane>

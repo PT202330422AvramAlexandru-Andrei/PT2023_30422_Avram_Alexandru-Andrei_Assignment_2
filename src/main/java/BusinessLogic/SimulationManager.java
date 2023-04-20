@@ -3,10 +3,11 @@ package BusinessLogic;
 import GUI.SimulationFrame;
 import Model.Server;
 import Model.Task;
+import com.example.queuemanager.MainController;
 
 import java.util.*;
 
-public class SimulationManager implements Runnable{
+public class SimulationManager implements Runnable {
 
     //data read  from UI
     public int timeLimit = 100;
@@ -82,6 +83,41 @@ public class SimulationManager implements Runnable{
         FileWrite.write("output.txt", "Generated tasks: " + generatedTasks.size() + "\n");
     }
 
+    public int getAverageWaitingTime() {
+        int sum = 0;
+        int count = 0;
+        for (Server s : scheduler.getServers()) {
+            for (Task t : s.getTasks()) {
+                sum += t.getServiceTime();
+                count++;
+            }
+        }
+        if (count == 0) {
+            return 0;
+        } else {
+            return (sum / count);
+        }
+    }
+
+    public int getAverageQueueLength() {
+        int sum = 0;
+        int count = 0;
+        for (Server s : scheduler.getServers()) {
+            sum += s.getTasks().size();
+            count++;
+        }
+
+        if (count == 0) {
+            return 0;
+        } else {
+            return (sum / count);
+        }
+    }
+
+    public int getCurrentTime() {
+        return scheduler.getCurrentTime();
+    }
+
     @Override
     public void run() {
         FileWrite.emptyFile("output.txt");
@@ -113,12 +149,15 @@ public class SimulationManager implements Runnable{
             }
 
             currentTime++;
+            scheduler.setCurrentTime(currentTime);
             System.out.println("==================");
             System.out.println("Current time: " + currentTime);
             System.out.println("==================");
             FileWrite.write("output.txt", "\n\n==================\n");
             FileWrite.write("output.txt", "Current time: " + currentTime + "\n");
             FileWrite.write("output.txt", "==================\n");
+
+            MainController.updateLabels(getAverageWaitingTime(), getAverageQueueLength(), getCurrentTime());
             //wait for 1 second
             try {
                 Thread.sleep(1000);

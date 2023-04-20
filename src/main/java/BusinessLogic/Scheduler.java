@@ -13,11 +13,21 @@ public class Scheduler {
     private Integer maxTasksPerServer;
     private Strategy strategy = new ConcreteStrategyQueue();
 
+    private int currentTime = 0;
+
     public Scheduler(List<Server> servers, Integer maxNoServers, Integer maxTasksPerServer, Strategy strategy) {
         this.servers = servers;
         this.maxNoServers = maxNoServers;
         this.maxTasksPerServer = maxTasksPerServer;
         this.strategy = strategy;
+    }
+
+    public int getCurrentTime() {
+        return currentTime;
+    }
+
+    public void setCurrentTime(int currentTime) {
+        this.currentTime = currentTime;
     }
 
     public Scheduler(int maxNoServers) {
