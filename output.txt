@@ -1,90 +1,154 @@
-Waiting tasks: [Task{id=0, arrivalTime=2, serviceTime=9}, Task{id=3, arrivalTime=2, serviceTime=7}, Task{id=5, arrivalTime=3, serviceTime=2}, Task{id=4, arrivalTime=4, serviceTime=2}, Task{id=6, arrivalTime=5, serviceTime=7}, Task{id=2, arrivalTime=6, serviceTime=2}, Task{id=1, arrivalTime=8, serviceTime=4}]
+Waiting tasks: [Task{id=4, arrivalTime=0, serviceTime=9}, Task{id=2, arrivalTime=2, serviceTime=7}, Task{id=0, arrivalTime=3, serviceTime=9}, Task{id=1, arrivalTime=3, serviceTime=3}, Task{id=5, arrivalTime=4, serviceTime=8}, Task{id=3, arrivalTime=9, serviceTime=8}]
 
-Queue for server 0: empty
+Queue for server 0: 4  
 Queue for server 1: empty
 Queue for server 2: empty
+Queue for server 3: empty
+Queue for server 4: empty
 
 ==================
 Current time: 1
 ==================
-Waiting tasks: [Task{id=0, arrivalTime=2, serviceTime=9}, Task{id=3, arrivalTime=2, serviceTime=7}, Task{id=5, arrivalTime=3, serviceTime=2}, Task{id=4, arrivalTime=4, serviceTime=2}, Task{id=6, arrivalTime=5, serviceTime=7}, Task{id=2, arrivalTime=6, serviceTime=2}, Task{id=1, arrivalTime=8, serviceTime=4}]
+Waiting tasks: [Task{id=2, arrivalTime=2, serviceTime=7}, Task{id=0, arrivalTime=3, serviceTime=9}, Task{id=1, arrivalTime=3, serviceTime=3}, Task{id=5, arrivalTime=4, serviceTime=8}, Task{id=3, arrivalTime=9, serviceTime=8}]
 
-Queue for server 0: empty
+Queue for server 0: 4  
 Queue for server 1: empty
 Queue for server 2: empty
+Queue for server 3: empty
+Queue for server 4: empty
 
 ==================
 Current time: 2
 ==================
-Waiting tasks: [Task{id=0, arrivalTime=2, serviceTime=9}, Task{id=3, arrivalTime=2, serviceTime=7}, Task{id=5, arrivalTime=3, serviceTime=2}, Task{id=4, arrivalTime=4, serviceTime=2}, Task{id=6, arrivalTime=5, serviceTime=7}, Task{id=2, arrivalTime=6, serviceTime=2}, Task{id=1, arrivalTime=8, serviceTime=4}]
+Waiting tasks: [Task{id=2, arrivalTime=2, serviceTime=7}, Task{id=0, arrivalTime=3, serviceTime=9}, Task{id=1, arrivalTime=3, serviceTime=3}, Task{id=5, arrivalTime=4, serviceTime=8}, Task{id=3, arrivalTime=9, serviceTime=8}]
 
-Queue for server 0: 0  
-Queue for server 1: 3  
+Queue for server 0: 4  
+Queue for server 1: 2  
 Queue for server 2: empty
+Queue for server 3: empty
+Queue for server 4: empty
 
 ==================
 Current time: 3
 ==================
-Waiting tasks: [Task{id=5, arrivalTime=3, serviceTime=2}, Task{id=4, arrivalTime=4, serviceTime=2}, Task{id=6, arrivalTime=5, serviceTime=7}, Task{id=2, arrivalTime=6, serviceTime=2}, Task{id=1, arrivalTime=8, serviceTime=4}]
+Waiting tasks: [Task{id=0, arrivalTime=3, serviceTime=9}, Task{id=1, arrivalTime=3, serviceTime=3}, Task{id=5, arrivalTime=4, serviceTime=8}, Task{id=3, arrivalTime=9, serviceTime=8}]
 
-Queue for server 0: 0  
-Queue for server 1: 3  
-Queue for server 2: 5  
+Queue for server 0: 4  
+Queue for server 1: 2  
+Queue for server 2: 0  
+Queue for server 3: 1  
+Queue for server 4: empty
 
 ==================
 Current time: 4
 ==================
-Waiting tasks: [Task{id=4, arrivalTime=4, serviceTime=2}, Task{id=6, arrivalTime=5, serviceTime=7}, Task{id=2, arrivalTime=6, serviceTime=2}, Task{id=1, arrivalTime=8, serviceTime=4}]
+Waiting tasks: [Task{id=5, arrivalTime=4, serviceTime=8}, Task{id=3, arrivalTime=9, serviceTime=8}]
 
-Queue for server 0: 0  4  
-Queue for server 1: 3  
-Queue for server 2: 5  
+Queue for server 0: 4  
+Queue for server 1: 2  
+Queue for server 2: 0  
+Queue for server 3: 1  
+Queue for server 4: 5  
 
 ==================
 Current time: 5
 ==================
-Waiting tasks: [Task{id=6, arrivalTime=5, serviceTime=7}, Task{id=2, arrivalTime=6, serviceTime=2}, Task{id=1, arrivalTime=8, serviceTime=4}]
+Waiting tasks: [Task{id=3, arrivalTime=9, serviceTime=8}]
 
-Queue for server 0: 0  4  
-Queue for server 1: 3  6  
-Queue for server 2: 5  
+Queue for server 0: 4  
+Queue for server 1: 2  
+Queue for server 2: 0  
+Queue for server 3: 1  
+Queue for server 4: 5  
 
 ==================
 Current time: 6
 ==================
-Waiting tasks: [Task{id=2, arrivalTime=6, serviceTime=2}, Task{id=1, arrivalTime=8, serviceTime=4}]
+Waiting tasks: [Task{id=3, arrivalTime=9, serviceTime=8}]
 
-Queue for server 0: 0  4  
-Queue for server 1: 3  6  
-Queue for server 2: 2  
+Queue for server 0: 4  
+Queue for server 1: 2  
+Queue for server 2: 0  
+Queue for server 3: 1  
+Queue for server 4: 5  
 
 ==================
 Current time: 7
 ==================
-Waiting tasks: [Task{id=1, arrivalTime=8, serviceTime=4}]
+Waiting tasks: [Task{id=3, arrivalTime=9, serviceTime=8}]
 
-Queue for server 0: 0  4  
-Queue for server 1: 3  6  
-Queue for server 2: 2  
+Queue for server 0: 4  
+Queue for server 1: 2  
+Queue for server 2: 0  
+Queue for server 3: empty
+Queue for server 4: 5  
 
 ==================
 Current time: 8
 ==================
-Waiting tasks: [Task{id=1, arrivalTime=8, serviceTime=4}]
+Waiting tasks: [Task{id=3, arrivalTime=9, serviceTime=8}]
 
-Queue for server 0: 0  4  
-Queue for server 1: 3  6  
-Queue for server 2: 2  1  
+Queue for server 0: 4  
+Queue for server 1: 2  
+Queue for server 2: 0  
+Queue for server 3: empty
+Queue for server 4: 5  
 
 ==================
 Current time: 9
 ==================
-Waiting tasks: []
+Waiting tasks: [Task{id=3, arrivalTime=9, serviceTime=8}]
 
-Queue for server 0: 0  4  
-Queue for server 1: 3  6  
-Queue for server 2: 1  
+Queue for server 0: 4  
+Queue for server 1: 2  
+Queue for server 2: 0  
+Queue for server 3: 3  
+Queue for server 4: 5  
 
 ==================
 Current time: 10
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+Queue for server 2: 0  
+Queue for server 3: 3  
+Queue for server 4: 5  
+
+==================
+Current time: 11
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+Queue for server 2: 0  
+Queue for server 3: 3  
+Queue for server 4: 5  
+
+==================
+Current time: 12
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+Queue for server 2: empty
+Queue for server 3: 3  
+Queue for server 4: empty
+
+==================
+Current time: 13
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+Queue for server 2: empty
+Queue for server 3: 3  
+Queue for server 4: empty
+
+==================
+Current time: 14
 ==================

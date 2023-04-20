@@ -16,6 +16,10 @@ public class App extends Application {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view.fxml"));
         Scene scene = new Scene(root, 600, 350);
         stage.setTitle("Queue Manager");
+        stage.getIcons().add(new javafx.scene.image.Image(getClass().getClassLoader().getResourceAsStream("icon.png")));
+        stage.setResizable(true);
+        stage.setMinHeight(350);
+        stage.setMinWidth(600);
         stage.setScene(scene);
         stage.show();
     }
