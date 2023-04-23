@@ -3,7 +3,9 @@ package BusinessLogic;
 import GUI.SimulationFrame;
 import Model.Server;
 import Model.Task;
+import com.example.queuemanager.App;
 import com.example.queuemanager.MainController;
+import javafx.application.Platform;
 
 import java.util.*;
 
@@ -48,15 +50,15 @@ public class SimulationManager implements Runnable {
         generateNRandomTasks();
     }
 
-    public SimulationManager(int timeLimit, int maxProcessingTime, int minProcessingTime, int numberOfServers) {
+    public SimulationManager(int timeLimit, int maxProcessingTime, int minProcessingTime, int numberOfServers, SelectionPolicy selectionPolicy) {
         this.timeLimit = timeLimit;
         this.maxProcessingTime = maxProcessingTime;
         this.minProcessingTime = minProcessingTime;
         this.numberOfServers = numberOfServers;
-        this.numberOfTasks = numberOfTasks;
         this.selectionPolicy = selectionPolicy;
 
         scheduler = new Scheduler(numberOfServers);
+        scheduler.changeStrategy(selectionPolicy);
 
         frame = new SimulationFrame();
         generateNRandomTasks();
@@ -157,7 +159,8 @@ public class SimulationManager implements Runnable {
             FileWrite.write("output.txt", "Current time: " + currentTime + "\n");
             FileWrite.write("output.txt", "==================\n");
 
-            MainController.updateLabels(getAverageWaitingTime(), getAverageQueueLength(), getCurrentTime());
+            MainController.updateLabels(currentTime);
+
             //wait for 1 second
             try {
                 Thread.sleep(1000);
@@ -171,5 +174,22 @@ public class SimulationManager implements Runnable {
         SimulationManager gen = new SimulationManager();
         Thread t = new Thread(gen);
         t.start();
+
+        /*Thread timeThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true) {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+
+        });
+
+        timeThread.start();*/
     }
 }

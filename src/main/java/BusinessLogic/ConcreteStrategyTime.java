@@ -16,8 +16,8 @@ public class ConcreteStrategyTime implements Strategy{
     @Override
     public Server selectServer(List<Server> servers) {
         Server server = servers.get(0);
-        for (Server s : servers) {
-            if (s.getTasks().size() < server.getTasks().size()) {
+        for(Server s : servers) {
+            if(s.getWaitingPeriod().get() < server.getWaitingPeriod().get()) {
                 server = s;
             }
         }

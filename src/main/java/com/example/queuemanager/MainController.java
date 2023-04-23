@@ -1,6 +1,7 @@
 package com.example.queuemanager;
 
 import BusinessLogic.FileWrite;
+import BusinessLogic.SelectionPolicy;
 import BusinessLogic.SimulationManager;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -9,11 +10,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class MainController {
 
@@ -30,7 +35,7 @@ public class MainController {
     TextField numServersTextField;
 
     @FXML
-    TextField outputTextArea;
+    ComboBox<String> strategyField;
 
     @FXML
     Button toQueues;
@@ -53,10 +58,6 @@ public class MainController {
         Scene currentScene = toQueues.getScene();
         currentScene.setRoot(newPage);
 
-        int timeLimit = Integer.parseInt(timeLimitTextField.getText());
-        int maxProcessingTime = Integer.parseInt(maxProcessingTimeTextField.getText());
-        int minProcessingTime = Integer.parseInt(minProcessingTimeTextField.getText());
-        int numServers = Integer.parseInt(numServersTextField.getText());
 
         //SimulationManager simulationManager = new SimulationManager(timeLimit, maxProcessingTime, minProcessingTime, numServers);
 
@@ -66,37 +67,23 @@ public class MainController {
 
         // Create a new thread to run the simulation
         Thread simulationThread = new Thread(() -> {
-            SimulationManager simulationManager = new SimulationManager(timeLimit, maxProcessingTime, minProcessingTime, numServers);
+            int timeLimit = Integer.parseInt(timeLimitTextField.getText());
+            int maxProcessingTime = Integer.parseInt(maxProcessingTimeTextField.getText());
+            int minProcessingTime = Integer.parseInt(minProcessingTimeTextField.getText());
+            int numServers = Integer.parseInt(numServersTextField.getText());
+            SelectionPolicy strategy = SelectionPolicy.valueOf(strategyField.getValue());
+
+            SimulationManager simulationManager = new SimulationManager(timeLimit, maxProcessingTime, minProcessingTime, numServers, strategy);
+
             simulationManager.run();
-
-            /*Platform.runLater(() -> {
-                queueLengthLabel.setText(Integer.toString(simulationManager.getAverageQueueLength()));
-                waitTimeLabel.setText(Integer.toString(simulationManager.getAverageWaitingTime()));
-
-                timee.setText(Integer.toString(simulationManager.getCurrentTime()));
-            });*/
-
-            Thread timeThread = new Thread(() -> {
-                while (simulationManager.getCurrentTime() < timeLimit) {
-                    int currentTime = simulationManager.getCurrentTime();
-                    String outputText = "Time: " + currentTime + "\n";
-                    final String finalOutputText = outputText;
-                    Platform.runLater(() -> {
-                        timee.setText(Integer.toString(currentTime));
-                    });
-                }
-            });
-
-            timeThread.start();
         });
 
         // Start the simulation thread
         simulationThread.start();
     }
 
-    public static synchronized void updateLabels(int averageQueueLength, int averageWaitingTime, int currentTime) {
-        queueLengthLabel.setText(Integer.toString(averageQueueLength));
-        waitTimeLabel.setText(Integer.toString(averageWaitingTime));
-        timee.setText("Time" + Integer.toString(currentTime));
+    public static void updateLabels(int currentTime) {
+
+        App.update(timee, currentTime);
     }
 }

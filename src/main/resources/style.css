@@ -47,3 +47,21 @@ Button:disabled {
   -fx-opacity: 0.5;
   -fx-text-fill: #ccc;
 }
+
+ComboBox {
+  -fx-font-size: 14px;
+  -fx-background-color: #fff;
+  -fx-border-color: #ccc;
+  -fx-border-width: 1px;
+  -fx-border-radius: 3px;
+  -fx-padding: 5px;
+}
+
+ComboBox:hover {
+  -fx-border-color: #999;
+}
+
+ComboBox:disabled {
+  -fx-opacity: 0.5;
+  -fx-text-fill: #ccc;
+}

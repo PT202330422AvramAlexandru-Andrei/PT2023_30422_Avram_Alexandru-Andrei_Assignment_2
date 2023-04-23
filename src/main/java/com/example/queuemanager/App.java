@@ -1,9 +1,11 @@
 package com.example.queuemanager;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -22,6 +24,13 @@ public class App extends Application {
         stage.setMinWidth(600);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public static void update(Label labelTime, int time) {
+        Platform.runLater(() -> {
+            labelTime.setText("Time: " + time);
+            //System.out.println("Thread " + Thread.currentThread().getId() + " updated time to " + time);
+        });
     }
 
     public static void main(String[] args) {

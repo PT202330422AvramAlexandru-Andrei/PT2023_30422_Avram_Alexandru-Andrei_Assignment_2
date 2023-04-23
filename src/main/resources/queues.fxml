@@ -19,10 +19,10 @@
 
     <Label fx:id="timee" text="Time: " GridPane.rowIndex="1" GridPane.columnIndex="0"/>
 
-    <Label fx:id="queueLengthLabel" text=" test" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <Label fx:id="queueLengthLabel" text="Average Queue Length: " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
 
-    <Label fx:id="waitTimeLabel" text=" test" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <Label fx:id="waitTimeLabel" text="Average Waiting Time: " GridPane.rowIndex="3" GridPane.columnIndex="0"/>
 
-    <Label fx:id="output" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <Label fx:id="output" text="HERE WILL BE THE OUTPUT" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
 
 </GridPane>
