@@ -9,15 +9,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class MainController {
@@ -59,6 +54,15 @@ public class MainController {
     public static Label timee = new Label();
 
     @FXML
+    private TextArea console;
+    public static PrintStream ps ;
+
+    public void initialize() {
+        ps = new PrintStream(new Console(console)) ;
+    }
+
+
+    @FXML
     private void handleStartSimulation(ActionEvent event) throws IOException {
 
         Parent newPage = FXMLLoader.load(getClass().getClassLoader().getResource("queues.fxml"));
@@ -94,8 +98,19 @@ public class MainController {
         simulationThread.start();
     }
 
-    public static void updateLabels(int currentTime) {
+    public class Console extends OutputStream {
+        private TextArea console;
 
-        App.update(timee, currentTime);
+        public Console(TextArea console) {
+            this.console = console;
+        }
+
+        public void appendText(String valueOf) {
+            Platform.runLater(() -> console.appendText(valueOf));
+        }
+
+        public void write(int b) throws IOException {
+            appendText(String.valueOf((char)b));
+        }
     }
 }

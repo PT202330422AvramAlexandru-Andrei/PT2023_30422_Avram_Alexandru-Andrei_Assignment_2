@@ -15,14 +15,8 @@
         <Insets top="25" right="25" bottom="25" left="25"/>
     </padding>
 
-    <Text text="Queues" GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
+    <Label text="Queues" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
 
-    <Label fx:id="timee" text="Time: " GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-
-    <Label fx:id="queueLengthLabel" text="Average Queue Length: " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-
-    <Label fx:id="waitTimeLabel" text="Average Waiting Time: " GridPane.rowIndex="3" GridPane.columnIndex="0"/>
-
-    <Label fx:id="output" text="HERE WILL BE THE OUTPUT" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <TextArea fx:id="console" GridPane.rowIndex="2" styleClass="text-area"/>
 
 </GridPane>

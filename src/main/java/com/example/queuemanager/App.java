@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -29,7 +30,6 @@ public class App extends Application {
     public static void update(Label labelTime, int time) {
         Platform.runLater(() -> {
             labelTime.setText("Time: " + time);
-            //System.out.println("Thread " + Thread.currentThread().getId() + " updated time to " + time);
         });
     }
 
