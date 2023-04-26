@@ -19,17 +19,26 @@
     <Label text="Time Limit:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
     <TextField fx:id="timeLimitTextField" text="100" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
 
-    <Label text="Max Processing Time:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-    <TextField fx:id="maxProcessingTimeTextField" text="10" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    <Label text="N:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="NTextField" text="10" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
 
-    <Label text="Min Processing Time:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
-    <TextField  fx:id="minProcessingTimeTextField" text="2" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    <Label text="Max Arrival Time:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <TextField fx:id="maxArrivalTimeTextField" text="12" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
 
-    <Label text="Number of Servers:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
-    <TextField fx:id="numServersTextField" text="3" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    <Label text="Min Arrival Time:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <TextField fx:id="minArrivalTimeTextField" text="2" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
 
-    <Label text="Task dispatching Strategy:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
-    <ComboBox fx:id="strategyField" value="SHORTEST_QUEUE" prefWidth="200" promptText="Select an option" GridPane.rowIndex="5" GridPane.columnIndex="1">
+    <Label text="Max Processing Time:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+    <TextField fx:id="maxProcessingTimeTextField" text="10" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+    <Label text="Min Processing Time:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+    <TextField  fx:id="minProcessingTimeTextField" text="2" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+    <Label text="Number of Servers:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+    <TextField fx:id="numServersTextField" text="3" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+    <Label text="Task dispatching Strategy:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="strategyField" value="SHORTEST_QUEUE" prefWidth="200" promptText="Select an option" GridPane.rowIndex="8" GridPane.columnIndex="1">
         <items>
             <FXCollections fx:factory="observableArrayList">
                 <String fx:value="SHORTEST_QUEUE" />
@@ -40,5 +49,5 @@
 
 
 
-    <Button fx:id="toQueues" text="Start Simulation" GridPane.rowIndex="6" GridPane.columnIndex="1" GridPane.halignment="RIGHT" onAction="#handleStartSimulation"/>
+    <Button fx:id="toQueues" text="Start Simulation" GridPane.rowIndex="9" GridPane.columnIndex="1" GridPane.halignment="RIGHT" onAction="#handleStartSimulation"/>
 </GridPane>

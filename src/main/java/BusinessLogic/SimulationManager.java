@@ -15,6 +15,9 @@ public class SimulationManager implements Runnable {
     public int timeLimit = 100;
     public int maxProcessingTime = 10;
     public int minProcessingTime = 2;
+
+    public int maxArrivalTime = 10;
+    public int minArrivalTime = 0;
     public int numberOfServers = 3;
     public int numberOfTasks = 100;
     public SelectionPolicy selectionPolicy = SelectionPolicy.SHORTEST_QUEUE;
@@ -23,7 +26,8 @@ public class SimulationManager implements Runnable {
     private Scheduler scheduler;
 
     //frame for displaying the simulation
-    private SimulationFrame frame;
+    private MainController controller;
+    //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
     //pool of tasks to be processed
     private List<Task> generatedTasks = Collections.synchronizedList(new ArrayList<>());
@@ -44,38 +48,41 @@ public class SimulationManager implements Runnable {
         //scheduler.changeStrategy(selectionPolicy);
 
         //initialize the frame
-        frame = new SimulationFrame();
+        controller = new MainController();
         //generate nrOfClients clients => generateNRandomTasks()
         //store the tasks in generatedTasks
-        generateNRandomTasks();
+        int N = (int) Math.random() * 100;
+        generateNRandomTasks(N);
     }
 
-    public SimulationManager(int timeLimit, int maxProcessingTime, int minProcessingTime, int numberOfServers, SelectionPolicy selectionPolicy) {
+    public SimulationManager(int N, int timeLimit, int maxProcessingTime, int minProcessingTime, int minArrivalTime, int maxArrivalTime, int numberOfServers, SelectionPolicy selectionPolicy) {
         this.timeLimit = timeLimit;
         this.maxProcessingTime = maxProcessingTime;
         this.minProcessingTime = minProcessingTime;
         this.numberOfServers = numberOfServers;
         this.selectionPolicy = selectionPolicy;
+        this.maxArrivalTime = maxArrivalTime;
+        this.minArrivalTime = maxArrivalTime;
 
         scheduler = new Scheduler(numberOfServers);
         scheduler.changeStrategy(selectionPolicy);
 
-        frame = new SimulationFrame();
-        generateNRandomTasks();
+        controller = new MainController();
+        generateNRandomTasks(N);
     }
 
-    public void generateNRandomTasks() {
+    public void generateNRandomTasks(int N) {
         //generate N random tasks
         //  -random processing time
         //minProcessingTime < processingTime < maxProcessingTime
         //  -random arrival time
         //sort the list by arrival time
 
-        for (int i = 0; i < Math.random() * 100; i++) {
+        for (int i = 0; i < N; i++) {
             Task task = new Task();
             task.setServiceTime((int) (Math.random() * (maxProcessingTime - minProcessingTime) + minProcessingTime));
             //change 10 to timeLimit after testing
-            task.setArrivalTime((int) ((Math.random() * 100) % 10));
+            task.setArrivalTime((int) ((Math.random() * (maxArrivalTime - minArrivalTime) + minArrivalTime)));
             task.setId(i);
             generatedTasks.add(task);
         }

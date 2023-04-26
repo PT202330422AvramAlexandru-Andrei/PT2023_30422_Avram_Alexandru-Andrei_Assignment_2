@@ -1,0 +1,480 @@
+Waiting tasks: [(0, 2, 2), (1, 2, 2), (2, 2, 2), (3, 2, 2)]
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 1
+==================
+Waiting tasks: [(0, 2, 2), (1, 2, 2), (2, 2, 2), (3, 2, 2)]
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 2
+==================
+Waiting tasks: [(0, 2, 2), (1, 2, 2), (2, 2, 2), (3, 2, 2)]
+
+Queue for server 0: 0  2
+Queue for server 1: 1  3
+
+==================
+Current time: 3
+==================
+Waiting tasks: []
+
+Queue for server 0: 0  2
+Queue for server 1: 1  3
+
+==================
+Current time: 4
+==================
+Waiting tasks: []
+
+Queue for server 0: 0  2
+Queue for server 1: 1  3
+
+==================
+Current time: 5
+==================
+Waiting tasks: []
+
+Queue for server 0: 2
+Queue for server 1: 3
+
+==================
+Current time: 6
+==================
+Waiting tasks: []
+
+Queue for server 0: 2
+Queue for server 1: 3
+
+==================
+Current time: 7
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 8
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 9
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 10
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 11
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 12
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 13
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 14
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 15
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 16
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 17
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 18
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 19
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 20
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 21
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 22
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 23
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 24
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 25
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 26
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 27
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 28
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 29
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 30
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 31
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 32
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 33
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 34
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 35
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 36
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 37
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 38
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 39
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 40
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 41
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 42
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 43
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 44
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 45
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 46
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 47
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 48
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 49
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 50
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 51
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 52
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 53
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 54
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 55
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 56
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 57
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 58
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 59
+==================
+Waiting tasks: []
+
+Queue for server 0: empty
+Queue for server 1: empty
+
+==================
+Current time: 60
+==================

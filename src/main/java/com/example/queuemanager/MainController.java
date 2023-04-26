@@ -32,7 +32,16 @@ public class MainController {
     TextField minProcessingTimeTextField;
 
     @FXML
+    TextField maxArrivalTimeTextField;
+
+    @FXML
+    TextField minArrivalTimeTextField;
+
+    @FXML
     TextField numServersTextField;
+
+    @FXML
+    TextField NTextField;
 
     @FXML
     ComboBox<String> strategyField;
@@ -70,10 +79,13 @@ public class MainController {
             int timeLimit = Integer.parseInt(timeLimitTextField.getText());
             int maxProcessingTime = Integer.parseInt(maxProcessingTimeTextField.getText());
             int minProcessingTime = Integer.parseInt(minProcessingTimeTextField.getText());
+            int maxArrivalTime = Integer.parseInt(maxArrivalTimeTextField.getText());
+            int minArrivalTime = Integer.parseInt(minArrivalTimeTextField.getText());
             int numServers = Integer.parseInt(numServersTextField.getText());
+            int N = Integer.parseInt(NTextField.getText());
             SelectionPolicy strategy = SelectionPolicy.valueOf(strategyField.getValue());
 
-            SimulationManager simulationManager = new SimulationManager(timeLimit, maxProcessingTime, minProcessingTime, numServers, strategy);
+            SimulationManager simulationManager = new SimulationManager(N, timeLimit, maxProcessingTime, minProcessingTime, maxArrivalTime, minArrivalTime, numServers, strategy);
 
             simulationManager.run();
         });
