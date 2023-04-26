@@ -10,8 +10,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/BusinessLogic/SimulationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BusinessLogic/SimulationManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/queuemanager/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/queuemanager/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/queuemanager/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/queuemanager/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/queues.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/queues.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

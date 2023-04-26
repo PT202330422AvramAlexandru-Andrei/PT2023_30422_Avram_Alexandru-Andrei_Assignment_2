@@ -14,7 +14,6 @@ import java.io.IOException;
 public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        //System.out.println(getClass().getResource("/view.fxml"));
 
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view.fxml"));
         Scene scene = new Scene(root, 600, 600);

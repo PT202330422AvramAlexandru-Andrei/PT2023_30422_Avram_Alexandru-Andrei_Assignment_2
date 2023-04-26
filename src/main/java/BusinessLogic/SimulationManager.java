@@ -91,10 +91,10 @@ public class SimulationManager implements Runnable {
         }
     }
 
-    public int getAverageQueueLength(List<Task> generatedTasks) {
+    public int getAverageQueueLength(List<Server> servers) {
         int sum = 0;
         int count = 0;
-        for (Server s : scheduler.getServers()) {
+        for (Server s : servers) {
             sum += s.getTasks().size();
             count++;
         }
@@ -103,10 +103,6 @@ public class SimulationManager implements Runnable {
         } else {
             return (sum / count);
         }
-    }
-
-    public int getCurrentTime() {
-        return scheduler.getCurrentTime();
     }
 
     @Override
@@ -132,8 +128,8 @@ public class SimulationManager implements Runnable {
 
             synchronized (generatedTasks) {
                 Iterator<Task> iterator = generatedTasks.iterator();
-                System.out.println("Average queue length: " + getAverageQueueLength(generatedTasks));
-                FileWrite.write("output.txt", "Average queue length: " + getAverageQueueLength(generatedTasks) + "\n");
+                System.out.println("Average queue length: " + getAverageQueueLength(scheduler.getServers()));
+                FileWrite.write("output.txt", "Average queue length: " + getAverageQueueLength(scheduler.getServers()) + "\n");
                 System.out.println("Waiting tasks: " + generatedTasks.toString());
                 FileWrite.write("output.txt", "Waiting tasks: " + generatedTasks.toString() + "\n");
                 while (iterator.hasNext()) {
@@ -173,7 +169,13 @@ public class SimulationManager implements Runnable {
         for (Task t : generatedTasks) {
             peakTime[t.getArrivalTime()]++;
         }
-        return Arrays.stream(peakTime).max().getAsInt();
+
+        for (int i = 0; i < timeLimit; i++) {
+            if (peakTime[i] == Arrays.stream(peakTime).max().getAsInt()) {
+                return i;
+            }
+        }
+        return 0;
     }
 
     private int getAverageServiceTime(List<Task> tasks) {
@@ -186,7 +188,7 @@ public class SimulationManager implements Runnable {
         if (count == 0) {
             return 0;
         } else {
-            return (int) (sum / count);
+            return (sum / count);
         }
     }
 

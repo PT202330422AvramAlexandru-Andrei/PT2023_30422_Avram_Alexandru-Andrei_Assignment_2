@@ -1,6 +1,5 @@
 package com.example.queuemanager;
 
-import BusinessLogic.FileWrite;
 import BusinessLogic.SelectionPolicy;
 import BusinessLogic.SimulationManager;
 import javafx.application.Platform;
@@ -10,10 +9,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
 
 import java.io.*;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class MainController {
 
@@ -45,15 +42,6 @@ public class MainController {
     Button toQueues;
 
     @FXML
-    public static Label queueLengthLabel = new Label();
-
-    @FXML
-    public static Label waitTimeLabel = new Label();
-
-    @FXML
-    public static Label timee = new Label();
-
-    @FXML
     private TextArea console;
     public static PrintStream ps ;
 
@@ -70,13 +58,6 @@ public class MainController {
         // Get the current scene and set the new page as the root
         Scene currentScene = toQueues.getScene();
         currentScene.setRoot(newPage);
-
-
-        //SimulationManager simulationManager = new SimulationManager(timeLimit, maxProcessingTime, minProcessingTime, numServers);
-
-        //simulationManager.run();
-
-        //FileWrite.write("test.txt", Runtime.getRuntime().exec("ls -l").getInputStream().toString());
 
         // Create a new thread to run the simulation
         Thread simulationThread = new Thread(() -> {
