@@ -1,8 +1,8 @@
-module com.example.queuemanager {
+module graphicaluserinterface {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens com.example.queuemanager to javafx.fxml;
-    exports com.example.queuemanager;
+    opens graphicaluserinterface to javafx.fxml;
+    exports graphicaluserinterface;
 }

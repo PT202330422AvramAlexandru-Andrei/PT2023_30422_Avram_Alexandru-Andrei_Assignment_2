@@ -20,6 +20,13 @@ public class Server implements Runnable {
         waitingPeriod.addAndGet(task.getServiceTime());
     }
 
+    public int getAverageServerWaitingTime() {
+        if(tasks.isEmpty()) {
+            return 0;
+        }
+        return waitingPeriod.get() / tasks.size();
+    }
+
     public BlockingDeque<Task> getTasks() {
         return tasks;
     }

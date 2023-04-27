@@ -1,4 +1,4 @@
-package com.example.queuemanager;
+package graphicaluserinterface;
 
 import BusinessLogic.SelectionPolicy;
 import BusinessLogic.SimulationManager;

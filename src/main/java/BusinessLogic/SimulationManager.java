@@ -2,7 +2,7 @@ package BusinessLogic;
 
 import Model.Server;
 import Model.Task;
-import com.example.queuemanager.MainController;
+import graphicaluserinterface.MainController;
 
 import java.util.*;
 
@@ -17,6 +17,9 @@ public class SimulationManager implements Runnable {
     public int minArrivalTime = 2;
     public int numberOfServers = 3;
     public int numberOfTasks = 100;
+
+
+    int[] peakTime = new int[timeLimit];
     public SelectionPolicy selectionPolicy = SelectionPolicy.SHORTEST_QUEUE;
 
     //entity responsible for queue management and client distribution
@@ -50,6 +53,7 @@ public class SimulationManager implements Runnable {
         this.selectionPolicy = selectionPolicy;
         this.maxArrivalTime = maxArrivalTime;
         this.minArrivalTime = minArrivalTime;
+        Arrays.fill(peakTime, 0);
 
         scheduler = new Scheduler(numberOfServers);
         scheduler.changeStrategy(selectionPolicy);
@@ -77,11 +81,11 @@ public class SimulationManager implements Runnable {
         FileWrite.write("output.txt", "Generated tasks: " + generatedTasks.size() + "\n");
     }
 
-    public int getAverageWaitingTime(List<Task> generatedTasks) {
+    public int getAverageWaitingTime(List<Server> servers) {
         int sum = 0;
         int count = 0;
-        for (Task t : generatedTasks) {
-            sum += t.getServiceTime();
+        for (Server s : servers) {
+            sum += s.getAverageServerWaitingTime();
             count++;
         }
         if (count == 0) {
@@ -113,13 +117,18 @@ public class SimulationManager implements Runnable {
 
         FileWrite.emptyFile("output.txt");
         int currentTime = 0;
-        System.out.println("Average waiting time: " + getAverageWaitingTime(generatedTasks));
-        FileWrite.write("output.txt", "Average waiting time: " + getAverageWaitingTime(generatedTasks) + "\n");
         System.out.println("Average service time: " + getAverageServiceTime(generatedTasks));
         FileWrite.write("output.txt", "Average service time: " + getAverageServiceTime(generatedTasks) + "\n");
-        System.out.println("Peak hour: " + getPeakTime(generatedTasks));
-        FileWrite.write("output.txt", "Peak hour: " + getPeakTime(generatedTasks) + "\n");
+        System.out.println("Peak hour: " + getPeakTime());
+        FileWrite.write("output.txt", "Peak hour: " + getPeakTime() + "\n");
         while (currentTime < timeLimit) {
+
+            System.out.println("==================");
+            System.out.println("Current time: " + currentTime);
+            System.out.println("==================");
+            FileWrite.write("output.txt", "\n\n==================\n");
+            FileWrite.write("output.txt", "Current time: " + currentTime + "\n");
+            FileWrite.write("output.txt", "==================\n");
             //iterate through the list of tasks (generatedTasks)
             //pick the tasks that have the current time as arrival time
             //  -send task to queue => scheduler.dispatchTask(task)
@@ -127,9 +136,12 @@ public class SimulationManager implements Runnable {
             //update the UI frame => frame.update()
 
             synchronized (generatedTasks) {
+                peakTime[currentTime] = getInQueueTasksNr();
                 Iterator<Task> iterator = generatedTasks.iterator();
                 System.out.println("Average queue length: " + getAverageQueueLength(scheduler.getServers()));
                 FileWrite.write("output.txt", "Average queue length: " + getAverageQueueLength(scheduler.getServers()) + "\n");
+                System.out.println("Average waiting time: " + getAverageWaitingTime(scheduler.getServers()));
+                FileWrite.write("output.txt", "Average waiting time: " + getAverageWaitingTime(scheduler.getServers()) + "\n");
                 System.out.println("Waiting tasks: " + generatedTasks.toString());
                 FileWrite.write("output.txt", "Waiting tasks: " + generatedTasks.toString() + "\n");
                 while (iterator.hasNext()) {
@@ -144,12 +156,6 @@ public class SimulationManager implements Runnable {
 
             currentTime++;
             scheduler.setCurrentTime(currentTime);
-            System.out.println("==================");
-            System.out.println("Current time: " + currentTime);
-            System.out.println("==================");
-            FileWrite.write("output.txt", "\n\n==================\n");
-            FileWrite.write("output.txt", "Current time: " + currentTime + "\n");
-            FileWrite.write("output.txt", "==================\n");
 
             //wait for 1 second
             try {
@@ -158,18 +164,19 @@ public class SimulationManager implements Runnable {
                 throw new RuntimeException(e);
             }
         }
+
+        System.out.println("Peak hour: " + getPeakTime());
     }
 
-    private int getPeakTime(List<Task> generatedTasks) {
-        int[] peakTime = new int[timeLimit];
-        for (int i = 0; i < timeLimit; i++) {
-            peakTime[i] = 0;
+    private int getInQueueTasksNr() {
+        int sum = 0;
+        for (Server s : scheduler.getServers()) {
+            sum += s.getTasks().size();
         }
+        return sum;
+    }
 
-        for (Task t : generatedTasks) {
-            peakTime[t.getArrivalTime()]++;
-        }
-
+    private int getPeakTime() {
         for (int i = 0; i < timeLimit; i++) {
             if (peakTime[i] == Arrays.stream(peakTime).max().getAsInt()) {
                 return i;

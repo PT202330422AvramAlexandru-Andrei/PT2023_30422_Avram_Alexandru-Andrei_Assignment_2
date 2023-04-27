@@ -9,7 +9,7 @@
 <?import java.lang.Void?>
 <?import java.util.ArrayList?>
 <GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml"
-          fx:controller="com.example.queuemanager.MainController"
+          fx:controller="graphicaluserinterface.MainController"
           stylesheets="/style.css">
     <padding>
         <Insets top="25" right="25" bottom="25" left="25"/>
