@@ -53,6 +53,7 @@ public class SimulationManager implements Runnable {
         this.selectionPolicy = selectionPolicy;
         this.maxArrivalTime = maxArrivalTime;
         this.minArrivalTime = minArrivalTime;
+        peakTime = new int[timeLimit];
         Arrays.fill(peakTime, 0);
 
         scheduler = new Scheduler(numberOfServers);
@@ -112,8 +113,8 @@ public class SimulationManager implements Runnable {
     @Override
     public void run() {
 
-        System.setOut(MainController.ps);
-        System.setErr(MainController.ps);
+        //System.setOut(MainController.ps);
+        //System.setErr(MainController.ps);
 
         FileWrite.emptyFile("output.txt");
         int currentTime = 0;

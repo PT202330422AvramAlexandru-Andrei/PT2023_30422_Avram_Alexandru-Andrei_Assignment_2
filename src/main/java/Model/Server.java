@@ -57,9 +57,9 @@ public class Server implements Runnable {
                 tasks.take();
                 waitingPeriod.addAndGet(-task.getServiceTime());
 
-                for (Task t : tasks) {
+                /*for (Task t : tasks) {
                     waitingPeriod.addAndGet(-t.getServiceTime());
-                }
+                }*/
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }

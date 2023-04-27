@@ -1,4 +1,13 @@
-Waiting tasks: [(0, 2, 1), (1, 2, 2), (2, 2, 6), (3, 2, 4), (4, 2, 2), (5, 2, 5), (6, 2, 5), (7, 2, 6), (8, 2, 1), (9, 2, 2), (10, 2, 6), (11, 2, 1), (12, 2, 4), (13, 2, 3), (14, 2, 2), (15, 2, 2), (16, 2, 2), (17, 2, 6), (18, 2, 1), (19, 2, 3), (20, 2, 1), (21, 2, 3), (22, 2, 6), (23, 2, 2), (24, 2, 2), (25, 2, 1), (26, 2, 3), (27, 2, 1), (28, 2, 1), (29, 2, 2), (30, 2, 5), (31, 2, 3), (32, 2, 3), (33, 2, 4), (34, 2, 6), (35, 2, 6), (36, 2, 2), (37, 2, 5), (38, 2, 1), (39, 2, 5), (40, 2, 4), (41, 2, 6), (42, 2, 6), (43, 2, 5), (44, 2, 4), (45, 2, 3), (46, 2, 6), (47, 2, 2), (48, 2, 6), (49, 2, 3)]
+Average service time: 3
+Peak hour: 0
+
+
+==================
+Current time: 0
+==================
+Average queue length: 0
+Average waiting time: 0
+Waiting tasks: [(18, 3, 2), (35, 6, 3), (24, 7, 6), (3, 8, 5), (16, 8, 3), (30, 8, 5), (34, 8, 6), (48, 8, 2), (21, 10, 6), (9, 11, 4), (20, 11, 5), (41, 11, 5), (46, 12, 5), (4, 13, 1), (45, 15, 6), (2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
 Queue for server 0: empty
 Queue for server 1: empty
@@ -9,7 +18,9 @@ Queue for server 4: empty
 ==================
 Current time: 1
 ==================
-Waiting tasks: [(0, 2, 1), (1, 2, 2), (2, 2, 6), (3, 2, 4), (4, 2, 2), (5, 2, 5), (6, 2, 5), (7, 2, 6), (8, 2, 1), (9, 2, 2), (10, 2, 6), (11, 2, 1), (12, 2, 4), (13, 2, 3), (14, 2, 2), (15, 2, 2), (16, 2, 2), (17, 2, 6), (18, 2, 1), (19, 2, 3), (20, 2, 1), (21, 2, 3), (22, 2, 6), (23, 2, 2), (24, 2, 2), (25, 2, 1), (26, 2, 3), (27, 2, 1), (28, 2, 1), (29, 2, 2), (30, 2, 5), (31, 2, 3), (32, 2, 3), (33, 2, 4), (34, 2, 6), (35, 2, 6), (36, 2, 2), (37, 2, 5), (38, 2, 1), (39, 2, 5), (40, 2, 4), (41, 2, 6), (42, 2, 6), (43, 2, 5), (44, 2, 4), (45, 2, 3), (46, 2, 6), (47, 2, 2), (48, 2, 6), (49, 2, 3)]
+Average queue length: 0
+Average waiting time: 0
+Waiting tasks: [(18, 3, 2), (35, 6, 3), (24, 7, 6), (3, 8, 5), (16, 8, 3), (30, 8, 5), (34, 8, 6), (48, 8, 2), (21, 10, 6), (9, 11, 4), (20, 11, 5), (41, 11, 5), (46, 12, 5), (4, 13, 1), (45, 15, 6), (2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
 Queue for server 0: empty
 Queue for server 1: empty
@@ -20,501 +31,593 @@ Queue for server 4: empty
 ==================
 Current time: 2
 ==================
-Waiting tasks: [(0, 2, 1), (1, 2, 2), (2, 2, 6), (3, 2, 4), (4, 2, 2), (5, 2, 5), (6, 2, 5), (7, 2, 6), (8, 2, 1), (9, 2, 2), (10, 2, 6), (11, 2, 1), (12, 2, 4), (13, 2, 3), (14, 2, 2), (15, 2, 2), (16, 2, 2), (17, 2, 6), (18, 2, 1), (19, 2, 3), (20, 2, 1), (21, 2, 3), (22, 2, 6), (23, 2, 2), (24, 2, 2), (25, 2, 1), (26, 2, 3), (27, 2, 1), (28, 2, 1), (29, 2, 2), (30, 2, 5), (31, 2, 3), (32, 2, 3), (33, 2, 4), (34, 2, 6), (35, 2, 6), (36, 2, 2), (37, 2, 5), (38, 2, 1), (39, 2, 5), (40, 2, 4), (41, 2, 6), (42, 2, 6), (43, 2, 5), (44, 2, 4), (45, 2, 3), (46, 2, 6), (47, 2, 2), (48, 2, 6), (49, 2, 3)]
+Average queue length: 0
+Average waiting time: 0
+Waiting tasks: [(18, 3, 2), (35, 6, 3), (24, 7, 6), (3, 8, 5), (16, 8, 3), (30, 8, 5), (34, 8, 6), (48, 8, 2), (21, 10, 6), (9, 11, 4), (20, 11, 5), (41, 11, 5), (46, 12, 5), (4, 13, 1), (45, 15, 6), (2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 0  5  10  15  20  25  30  35  40  45
-Queue for server 1: 1  6  11  16  21  26  31  36  41  46
-Queue for server 2: 2  7  12  17  22  27  32  37  42  47
-Queue for server 3: 3  8  13  18  23  28  33  38  43  48
-Queue for server 4: 4  9  14  19  24  29  34  39  44  49
+Queue for server 0: empty
+Queue for server 1: empty
+Queue for server 2: empty
+Queue for server 3: empty
+Queue for server 4: empty
 
 ==================
 Current time: 3
 ==================
-Waiting tasks: []
+Average queue length: 0
+Average waiting time: 0
+Waiting tasks: [(18, 3, 2), (35, 6, 3), (24, 7, 6), (3, 8, 5), (16, 8, 3), (30, 8, 5), (34, 8, 6), (48, 8, 2), (21, 10, 6), (9, 11, 4), (20, 11, 5), (41, 11, 5), (46, 12, 5), (4, 13, 1), (45, 15, 6), (2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 0  5  10  15  20  25  30  35  40  45
-Queue for server 1: 1  6  11  16  21  26  31  36  41  46
-Queue for server 2: 2  7  12  17  22  27  32  37  42  47
-Queue for server 3: 3  8  13  18  23  28  33  38  43  48
-Queue for server 4: 4  9  14  19  24  29  34  39  44  49
+Queue for server 0: 18  
+Queue for server 1: empty
+Queue for server 2: empty
+Queue for server 3: empty
+Queue for server 4: empty
 
 ==================
 Current time: 4
 ==================
-Waiting tasks: []
+Average queue length: 0
+Average waiting time: 0
+Waiting tasks: [(35, 6, 3), (24, 7, 6), (3, 8, 5), (16, 8, 3), (30, 8, 5), (34, 8, 6), (48, 8, 2), (21, 10, 6), (9, 11, 4), (20, 11, 5), (41, 11, 5), (46, 12, 5), (4, 13, 1), (45, 15, 6), (2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 5  10  15  20  25  30  35  40  45
-Queue for server 1: 1  6  11  16  21  26  31  36  41  46
-Queue for server 2: 2  7  12  17  22  27  32  37  42  47
-Queue for server 3: 3  8  13  18  23  28  33  38  43  48
-Queue for server 4: 4  9  14  19  24  29  34  39  44  49
+Queue for server 0: 18  
+Queue for server 1: empty
+Queue for server 2: empty
+Queue for server 3: empty
+Queue for server 4: empty
 
 ==================
 Current time: 5
 ==================
-Waiting tasks: []
+Average queue length: 0
+Average waiting time: 0
+Waiting tasks: [(35, 6, 3), (24, 7, 6), (3, 8, 5), (16, 8, 3), (30, 8, 5), (34, 8, 6), (48, 8, 2), (21, 10, 6), (9, 11, 4), (20, 11, 5), (41, 11, 5), (46, 12, 5), (4, 13, 1), (45, 15, 6), (2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 5  10  15  20  25  30  35  40  45
-Queue for server 1: 6  11  16  21  26  31  36  41  46
-Queue for server 2: 2  7  12  17  22  27  32  37  42  47
-Queue for server 3: 3  8  13  18  23  28  33  38  43  48
-Queue for server 4: 9  14  19  24  29  34  39  44  49
+Queue for server 0: 18  
+Queue for server 1: empty
+Queue for server 2: empty
+Queue for server 3: empty
+Queue for server 4: empty
 
 ==================
 Current time: 6
 ==================
-Waiting tasks: []
+Average queue length: 0
+Average waiting time: 0
+Waiting tasks: [(35, 6, 3), (24, 7, 6), (3, 8, 5), (16, 8, 3), (30, 8, 5), (34, 8, 6), (48, 8, 2), (21, 10, 6), (9, 11, 4), (20, 11, 5), (41, 11, 5), (46, 12, 5), (4, 13, 1), (45, 15, 6), (2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 5  10  15  20  25  30  35  40  45
-Queue for server 1: 6  11  16  21  26  31  36  41  46
-Queue for server 2: 2  7  12  17  22  27  32  37  42  47
-Queue for server 3: 3  8  13  18  23  28  33  38  43  48
-Queue for server 4: 9  14  19  24  29  34  39  44  49
+Queue for server 0: 35  
+Queue for server 1: empty
+Queue for server 2: empty
+Queue for server 3: empty
+Queue for server 4: empty
 
 ==================
 Current time: 7
 ==================
-Waiting tasks: []
+Average queue length: 0
+Average waiting time: 0
+Waiting tasks: [(24, 7, 6), (3, 8, 5), (16, 8, 3), (30, 8, 5), (34, 8, 6), (48, 8, 2), (21, 10, 6), (9, 11, 4), (20, 11, 5), (41, 11, 5), (46, 12, 5), (4, 13, 1), (45, 15, 6), (2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 5  10  15  20  25  30  35  40  45
-Queue for server 1: 6  11  16  21  26  31  36  41  46
-Queue for server 2: 2  7  12  17  22  27  32  37  42  47
-Queue for server 3: 8  13  18  23  28  33  38  43  48
-Queue for server 4: 14  19  24  29  34  39  44  49
+Queue for server 0: 35  
+Queue for server 1: 24  
+Queue for server 2: empty
+Queue for server 3: empty
+Queue for server 4: empty
 
 ==================
 Current time: 8
 ==================
-Waiting tasks: []
+Average queue length: 0
+Average waiting time: 1
+Waiting tasks: [(3, 8, 5), (16, 8, 3), (30, 8, 5), (34, 8, 6), (48, 8, 2), (21, 10, 6), (9, 11, 4), (20, 11, 5), (41, 11, 5), (46, 12, 5), (4, 13, 1), (45, 15, 6), (2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 5  10  15  20  25  30  35  40  45
-Queue for server 1: 6  11  16  21  26  31  36  41  46
-Queue for server 2: 2  7  12  17  22  27  32  37  42  47
-Queue for server 3: 13  18  23  28  33  38  43  48
-Queue for server 4: 14  19  24  29  34  39  44  49
+Queue for server 0: 35  34  
+Queue for server 1: 24  48  
+Queue for server 2: 3  
+Queue for server 3: 16  
+Queue for server 4: 30  
 
 ==================
 Current time: 9
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 4
+Waiting tasks: [(21, 10, 6), (9, 11, 4), (20, 11, 5), (41, 11, 5), (46, 12, 5), (4, 13, 1), (45, 15, 6), (2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 10  15  20  25  30  35  40  45
-Queue for server 1: 6  11  16  21  26  31  36  41  46
-Queue for server 2: 7  12  17  22  27  32  37  42  47
-Queue for server 3: 13  18  23  28  33  38  43  48
-Queue for server 4: 19  24  29  34  39  44  49
+Queue for server 0: 35  34  
+Queue for server 1: 24  48  
+Queue for server 2: 3  
+Queue for server 3: 16  
+Queue for server 4: 30  
 
 ==================
 Current time: 10
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 4
+Waiting tasks: [(21, 10, 6), (9, 11, 4), (20, 11, 5), (41, 11, 5), (46, 12, 5), (4, 13, 1), (45, 15, 6), (2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 10  15  20  25  30  35  40  45
-Queue for server 1: 11  16  21  26  31  36  41  46
-Queue for server 2: 7  12  17  22  27  32  37  42  47
-Queue for server 3: 13  18  23  28  33  38  43  48
-Queue for server 4: 19  24  29  34  39  44  49
+Queue for server 0: 34  21  
+Queue for server 1: 24  48  
+Queue for server 2: 3  
+Queue for server 3: 16  
+Queue for server 4: 30  
 
 ==================
 Current time: 11
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 4
+Waiting tasks: [(9, 11, 4), (20, 11, 5), (41, 11, 5), (46, 12, 5), (4, 13, 1), (45, 15, 6), (2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 10  15  20  25  30  35  40  45
-Queue for server 1: 16  21  26  31  36  41  46
-Queue for server 2: 7  12  17  22  27  32  37  42  47
-Queue for server 3: 18  23  28  33  38  43  48
-Queue for server 4: 19  24  29  34  39  44  49
+Queue for server 0: 34  21  
+Queue for server 1: 24  48  
+Queue for server 2: 3  9  
+Queue for server 3: 16  20  
+Queue for server 4: 30  41  
 
 ==================
 Current time: 12
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 4
+Waiting tasks: [(46, 12, 5), (4, 13, 1), (45, 15, 6), (2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 10  15  20  25  30  35  40  45
-Queue for server 1: 16  21  26  31  36  41  46
-Queue for server 2: 7  12  17  22  27  32  37  42  47
-Queue for server 3: 23  28  33  38  43  48
-Queue for server 4: 24  29  34  39  44  49
+Queue for server 0: 34  21  
+Queue for server 1: 24  48  
+Queue for server 2: 3  9  
+Queue for server 3: 20  46  
+Queue for server 4: 30  41  
 
 ==================
 Current time: 13
 ==================
-Waiting tasks: []
+Average queue length: 2
+Average waiting time: 4
+Waiting tasks: [(4, 13, 1), (45, 15, 6), (2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 10  15  20  25  30  35  40  45
-Queue for server 1: 21  26  31  36  41  46
-Queue for server 2: 7  12  17  22  27  32  37  42  47
-Queue for server 3: 23  28  33  38  43  48
-Queue for server 4: 24  29  34  39  44  49
+Queue for server 0: 34  21  4  
+Queue for server 1: 24  48  
+Queue for server 2: 3  9  
+Queue for server 3: 20  46  
+Queue for server 4: 30  41  
 
 ==================
 Current time: 14
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 4
+Waiting tasks: [(45, 15, 6), (2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 10  15  20  25  30  35  40  45
-Queue for server 1: 21  26  31  36  41  46
-Queue for server 2: 7  12  17  22  27  32  37  42  47
-Queue for server 3: 28  33  38  43  48
-Queue for server 4: 29  34  39  44  49
+Queue for server 0: 34  21  4  
+Queue for server 1: 48  
+Queue for server 2: 9  
+Queue for server 3: 20  46  
+Queue for server 4: 41  
 
 ==================
 Current time: 15
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 4
+Waiting tasks: [(45, 15, 6), (2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 15  20  25  30  35  40  45
-Queue for server 1: 21  26  31  36  41  46
-Queue for server 2: 12  17  22  27  32  37  42  47
-Queue for server 3: 33  38  43  48
-Queue for server 4: 29  34  39  44  49
+Queue for server 0: 34  21  4  
+Queue for server 1: 48  45  
+Queue for server 2: 9  
+Queue for server 3: 20  46  
+Queue for server 4: 41  
 
 ==================
 Current time: 16
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 4
+Waiting tasks: [(2, 16, 3), (7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 15  20  25  30  35  40  45
-Queue for server 1: 26  31  36  41  46
-Queue for server 2: 12  17  22  27  32  37  42  47
-Queue for server 3: 33  38  43  48
-Queue for server 4: 34  39  44  49
+Queue for server 0: 21  4  
+Queue for server 1: 45  2  
+Queue for server 2: 9  
+Queue for server 3: 20  46  
+Queue for server 4: 41  
 
 ==================
 Current time: 17
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 4
+Waiting tasks: [(7, 17, 1), (27, 17, 2), (32, 17, 2), (5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 25  30  35  40  45
-Queue for server 1: 26  31  36  41  46
-Queue for server 2: 12  17  22  27  32  37  42  47
-Queue for server 3: 33  38  43  48
-Queue for server 4: 34  39  44  49
+Queue for server 0: 21  4  
+Queue for server 1: 45  2  
+Queue for server 2: 9  7  
+Queue for server 3: 46  27  
+Queue for server 4: 41  32  
 
 ==================
 Current time: 18
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 2
+Waiting tasks: [(5, 18, 1), (10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 30  35  40  45
-Queue for server 1: 31  36  41  46
-Queue for server 2: 17  22  27  32  37  42  47
-Queue for server 3: 38  43  48
-Queue for server 4: 34  39  44  49
+Queue for server 0: 21  4  
+Queue for server 1: 45  2  
+Queue for server 2: 7  5  
+Queue for server 3: 46  27  
+Queue for server 4: 41  32  
 
 ==================
 Current time: 19
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 2
+Waiting tasks: [(10, 19, 3), (47, 19, 1), (11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 30  35  40  45
-Queue for server 1: 31  36  41  46
-Queue for server 2: 17  22  27  32  37  42  47
-Queue for server 3: 43  48
-Queue for server 4: 34  39  44  49
+Queue for server 0: 21  4  
+Queue for server 1: 45  2  
+Queue for server 2: 5  10  
+Queue for server 3: 46  27  
+Queue for server 4: 32  47  
 
 ==================
 Current time: 20
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 2
+Waiting tasks: [(11, 20, 5), (37, 20, 4), (26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 30  35  40  45
-Queue for server 1: 31  36  41  46
-Queue for server 2: 17  22  27  32  37  42  47
-Queue for server 3: 43  48
-Queue for server 4: 34  39  44  49
+Queue for server 0: 21  4  37  
+Queue for server 1: 45  2  
+Queue for server 2: 10  11  
+Queue for server 3: 46  27  
+Queue for server 4: 32  47  
 
 ==================
 Current time: 21
 ==================
-Waiting tasks: []
+Average queue length: 2
+Average waiting time: 3
+Waiting tasks: [(26, 21, 3), (29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 30  35  40  45
-Queue for server 1: 36  41  46
-Queue for server 2: 17  22  27  32  37  42  47
-Queue for server 3: 43  48
-Queue for server 4: 39  44  49
+Queue for server 0: 21  4  37  
+Queue for server 1: 45  2  
+Queue for server 2: 10  11  
+Queue for server 3: 46  27  
+Queue for server 4: 47  26  
 
 ==================
 Current time: 22
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 2
+Waiting tasks: [(29, 22, 4), (28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 30  35  40  45
-Queue for server 1: 36  41  46
-Queue for server 2: 17  22  27  32  37  42  47
-Queue for server 3: 43  48
-Queue for server 4: 39  44  49
+Queue for server 0: 4  37  
+Queue for server 1: 2  29  
+Queue for server 2: 10  11  
+Queue for server 3: 27  
+Queue for server 4: 26  
 
 ==================
 Current time: 23
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 3
+Waiting tasks: [(28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 35  40  45
-Queue for server 1: 41  46
-Queue for server 2: 17  22  27  32  37  42  47
-Queue for server 3: 43  48
-Queue for server 4: 39  44  49
+Queue for server 0: 37  
+Queue for server 1: 2  29  
+Queue for server 2: 11  
+Queue for server 3: 27  
+Queue for server 4: 26  
 
 ==================
 Current time: 24
 ==================
-Waiting tasks: []
+Average queue length: 0
+Average waiting time: 2
+Waiting tasks: [(28, 24, 2), (33, 24, 6), (36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 35  40  45
-Queue for server 1: 41  46
-Queue for server 2: 22  27  32  37  42  47
-Queue for server 3: 48
-Queue for server 4: 39  44  49
+Queue for server 0: 37  
+Queue for server 1: 29  
+Queue for server 2: 11  
+Queue for server 3: 28  
+Queue for server 4: 33  
 
 ==================
 Current time: 25
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 4
+Waiting tasks: [(36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 35  40  45
-Queue for server 1: 41  46
-Queue for server 2: 22  27  32  37  42  47
-Queue for server 3: 48
-Queue for server 4: 39  44  49
+Queue for server 0: 37  
+Queue for server 1: 29  
+Queue for server 2: 11  
+Queue for server 3: 28  
+Queue for server 4: 33  
 
 ==================
 Current time: 26
 ==================
-Waiting tasks: []
+Average queue length: 0
+Average waiting time: 3
+Waiting tasks: [(36, 26, 2), (1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 35  40  45
-Queue for server 1: 41  46
-Queue for server 2: 22  27  32  37  42  47
-Queue for server 3: 48
-Queue for server 4: 44  49
+Queue for server 0: 36  
+Queue for server 1: 29  
+Queue for server 2: 11  
+Queue for server 3: 28  
+Queue for server 4: 33  
 
 ==================
 Current time: 27
 ==================
-Waiting tasks: []
+Average queue length: 0
+Average waiting time: 2
+Waiting tasks: [(1, 27, 3), (12, 27, 4), (13, 27, 5), (23, 27, 2), (43, 27, 1), (44, 27, 2), (8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 35  40  45
-Queue for server 1: 41  46
-Queue for server 2: 22  27  32  37  42  47
-Queue for server 3: 48
-Queue for server 4: 44  49
+Queue for server 0: 36  13  
+Queue for server 1: 29  23  
+Queue for server 2: 1  43  
+Queue for server 3: 12  44  
+Queue for server 4: 33  
 
 ==================
 Current time: 28
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 3
+Waiting tasks: [(8, 28, 2), (19, 28, 1), (25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 35  40  45
-Queue for server 1: 41  46
-Queue for server 2: 22  27  32  37  42  47
-Queue for server 3: 48
-Queue for server 4: 44  49
+Queue for server 0: 36  13  
+Queue for server 1: 23  8  
+Queue for server 2: 1  43  
+Queue for server 3: 12  44  
+Queue for server 4: 33  19  
 
 ==================
 Current time: 29
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 3
+Waiting tasks: [(25, 29, 1), (38, 29, 6), (39, 29, 6), (0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 40  45
-Queue for server 1: 46
-Queue for server 2: 22  27  32  37  42  47
-Queue for server 3: 48
-Queue for server 4: 44  49
+Queue for server 0: 13  25  38  
+Queue for server 1: 23  8  39  
+Queue for server 2: 1  43  
+Queue for server 3: 12  44  
+Queue for server 4: 33  19  
 
 ==================
 Current time: 30
 ==================
-Waiting tasks: []
+Average queue length: 2
+Average waiting time: 3
+Waiting tasks: [(0, 30, 5), (31, 30, 1), (14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 40  45
-Queue for server 1: 46
-Queue for server 2: 27  32  37  42  47
-Queue for server 3: empty
-Queue for server 4: 49
+Queue for server 0: 13  25  38  
+Queue for server 1: 8  39  0  
+Queue for server 2: 1  43  31  
+Queue for server 3: 12  44  
+Queue for server 4: 33  19  
 
 ==================
 Current time: 31
 ==================
-Waiting tasks: []
+Average queue length: 2
+Average waiting time: 2
+Waiting tasks: [(14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 40  45
-Queue for server 1: 46
-Queue for server 2: 32  37  42  47
-Queue for server 3: empty
-Queue for server 4: 49
+Queue for server 0: 13  25  38  
+Queue for server 1: 8  39  0  
+Queue for server 2: 43  31  
+Queue for server 3: 12  44  
+Queue for server 4: 19  
 
 ==================
 Current time: 32
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 2
+Waiting tasks: [(14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 40  45
-Queue for server 1: 46
-Queue for server 2: 32  37  42  47
-Queue for server 3: empty
-Queue for server 4: 49
+Queue for server 0: 13  25  38  
+Queue for server 1: 39  0  
+Queue for server 2: 31  
+Queue for server 3: 44  
+Queue for server 4: empty
 
 ==================
 Current time: 33
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 2
+Waiting tasks: [(14, 33, 2), (17, 33, 5), (22, 33, 4), (49, 33, 6), (6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 45
-Queue for server 1: 46
-Queue for server 2: 32  37  42  47
-Queue for server 3: empty
-Queue for server 4: empty
+Queue for server 0: 13  25  38  
+Queue for server 1: 39  0  
+Queue for server 2: 14  22  
+Queue for server 3: 44  49  
+Queue for server 4: 17  
 
 ==================
 Current time: 34
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 4
+Waiting tasks: [(6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 45
-Queue for server 1: 46
-Queue for server 2: 37  42  47
-Queue for server 3: empty
-Queue for server 4: empty
+Queue for server 0: 25  38  
+Queue for server 1: 39  0  
+Queue for server 2: 14  22  
+Queue for server 3: 49  
+Queue for server 4: 17  
 
 ==================
 Current time: 35
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 5
+Waiting tasks: [(6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: 45
-Queue for server 1: empty
-Queue for server 2: 37  42  47
-Queue for server 3: empty
-Queue for server 4: empty
+Queue for server 0: 38  
+Queue for server 1: 39  0  
+Queue for server 2: 14  22  
+Queue for server 3: 49  
+Queue for server 4: 17  
 
 ==================
 Current time: 36
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 5
+Waiting tasks: [(6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: empty
-Queue for server 1: empty
-Queue for server 2: 37  42  47
-Queue for server 3: empty
-Queue for server 4: empty
+Queue for server 0: 38  
+Queue for server 1: 39  0  
+Queue for server 2: 22  
+Queue for server 3: 49  
+Queue for server 4: 17  
 
 ==================
 Current time: 37
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 5
+Waiting tasks: [(6, 37, 5), (15, 37, 5), (42, 37, 5), (40, 39, 1)]
 
-Queue for server 0: empty
-Queue for server 1: empty
-Queue for server 2: 37  42  47
-Queue for server 3: empty
-Queue for server 4: empty
+Queue for server 0: 38  6  
+Queue for server 1: 39  0  
+Queue for server 2: 22  15  
+Queue for server 3: 49  42  
+Queue for server 4: 17  
 
 ==================
 Current time: 38
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 4
+Waiting tasks: [(40, 39, 1)]
 
-Queue for server 0: empty
-Queue for server 1: empty
-Queue for server 2: 37  42  47
-Queue for server 3: empty
-Queue for server 4: empty
+Queue for server 0: 38  6  
+Queue for server 1: 0  
+Queue for server 2: 22  15  
+Queue for server 3: 49  42  
+Queue for server 4: 17  
 
 ==================
 Current time: 39
 ==================
-Waiting tasks: []
+Average queue length: 1
+Average waiting time: 3
+Waiting tasks: [(40, 39, 1)]
 
-Queue for server 0: empty
-Queue for server 1: empty
-Queue for server 2: 42  47
-Queue for server 3: empty
-Queue for server 4: empty
+Queue for server 0: 38  6  
+Queue for server 1: 0  
+Queue for server 2: 22  15  
+Queue for server 3: 49  42  
+Queue for server 4: 40  
 
 ==================
 Current time: 40
 ==================
+Average queue length: 1
+Average waiting time: 4
 Waiting tasks: []
 
-Queue for server 0: empty
-Queue for server 1: empty
-Queue for server 2: 42  47
-Queue for server 3: empty
-Queue for server 4: empty
+Queue for server 0: 38  6  
+Queue for server 1: 0  
+Queue for server 2: 15  
+Queue for server 3: 42  
+Queue for server 4: 40  
 
 ==================
 Current time: 41
 ==================
+Average queue length: 0
+Average waiting time: 4
 Waiting tasks: []
 
-Queue for server 0: empty
-Queue for server 1: empty
-Queue for server 2: 42  47
-Queue for server 3: empty
+Queue for server 0: 6  
+Queue for server 1: 0  
+Queue for server 2: 15  
+Queue for server 3: 42  
 Queue for server 4: empty
 
 ==================
 Current time: 42
 ==================
+Average queue length: 0
+Average waiting time: 4
 Waiting tasks: []
 
-Queue for server 0: empty
-Queue for server 1: empty
-Queue for server 2: 42  47
-Queue for server 3: empty
+Queue for server 0: 6  
+Queue for server 1: 0  
+Queue for server 2: 15  
+Queue for server 3: 42  
 Queue for server 4: empty
 
 ==================
 Current time: 43
 ==================
+Average queue length: 0
+Average waiting time: 3
 Waiting tasks: []
 
-Queue for server 0: empty
+Queue for server 0: 6  
 Queue for server 1: empty
-Queue for server 2: 42  47
-Queue for server 3: empty
+Queue for server 2: 15  
+Queue for server 3: 42  
 Queue for server 4: empty
 
 ==================
 Current time: 44
 ==================
+Average queue length: 0
+Average waiting time: 3
 Waiting tasks: []
 
-Queue for server 0: empty
+Queue for server 0: 6  
 Queue for server 1: empty
-Queue for server 2: 42  47
-Queue for server 3: empty
+Queue for server 2: 15  
+Queue for server 3: 42  
 Queue for server 4: empty
 
 ==================
 Current time: 45
 ==================
+Average queue length: 0
+Average waiting time: 1
 Waiting tasks: []
 
-Queue for server 0: empty
+Queue for server 0: 6  
 Queue for server 1: empty
-Queue for server 2: 47
+Queue for server 2: empty
 Queue for server 3: empty
 Queue for server 4: empty
 
 ==================
 Current time: 46
 ==================
+Average queue length: 0
+Average waiting time: 0
 Waiting tasks: []
 
 Queue for server 0: empty
 Queue for server 1: empty
-Queue for server 2: 47
+Queue for server 2: empty
 Queue for server 3: empty
 Queue for server 4: empty
 
 ==================
 Current time: 47
 ==================
+Average queue length: 0
+Average waiting time: 0
 Waiting tasks: []
 
 Queue for server 0: empty
@@ -526,6 +629,8 @@ Queue for server 4: empty
 ==================
 Current time: 48
 ==================
+Average queue length: 0
+Average waiting time: 0
 Waiting tasks: []
 
 Queue for server 0: empty
@@ -537,6 +642,8 @@ Queue for server 4: empty
 ==================
 Current time: 49
 ==================
+Average queue length: 0
+Average waiting time: 0
 Waiting tasks: []
 
 Queue for server 0: empty
@@ -548,6 +655,8 @@ Queue for server 4: empty
 ==================
 Current time: 50
 ==================
+Average queue length: 0
+Average waiting time: 0
 Waiting tasks: []
 
 Queue for server 0: empty
@@ -559,6 +668,8 @@ Queue for server 4: empty
 ==================
 Current time: 51
 ==================
+Average queue length: 0
+Average waiting time: 0
 Waiting tasks: []
 
 Queue for server 0: empty
@@ -570,6 +681,8 @@ Queue for server 4: empty
 ==================
 Current time: 52
 ==================
+Average queue length: 0
+Average waiting time: 0
 Waiting tasks: []
 
 Queue for server 0: empty
@@ -581,6 +694,8 @@ Queue for server 4: empty
 ==================
 Current time: 53
 ==================
+Average queue length: 0
+Average waiting time: 0
 Waiting tasks: []
 
 Queue for server 0: empty
@@ -592,6 +707,8 @@ Queue for server 4: empty
 ==================
 Current time: 54
 ==================
+Average queue length: 0
+Average waiting time: 0
 Waiting tasks: []
 
 Queue for server 0: empty
@@ -603,6 +720,8 @@ Queue for server 4: empty
 ==================
 Current time: 55
 ==================
+Average queue length: 0
+Average waiting time: 0
 Waiting tasks: []
 
 Queue for server 0: empty
@@ -614,6 +733,8 @@ Queue for server 4: empty
 ==================
 Current time: 56
 ==================
+Average queue length: 0
+Average waiting time: 0
 Waiting tasks: []
 
 Queue for server 0: empty
@@ -625,6 +746,8 @@ Queue for server 4: empty
 ==================
 Current time: 57
 ==================
+Average queue length: 0
+Average waiting time: 0
 Waiting tasks: []
 
 Queue for server 0: empty
@@ -636,6 +759,8 @@ Queue for server 4: empty
 ==================
 Current time: 58
 ==================
+Average queue length: 0
+Average waiting time: 0
 Waiting tasks: []
 
 Queue for server 0: empty
@@ -647,6 +772,8 @@ Queue for server 4: empty
 ==================
 Current time: 59
 ==================
+Average queue length: 0
+Average waiting time: 0
 Waiting tasks: []
 
 Queue for server 0: empty
@@ -654,7 +781,3 @@ Queue for server 1: empty
 Queue for server 2: empty
 Queue for server 3: empty
 Queue for server 4: empty
-
-==================
-Current time: 60
-==================
