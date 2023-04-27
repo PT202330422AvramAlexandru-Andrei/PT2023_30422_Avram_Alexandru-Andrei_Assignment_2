@@ -8,11 +8,6 @@ public class Server implements Runnable {
     private BlockingDeque<Task> tasks;
     private AtomicInteger waitingPeriod;
 
-    /*public Server(BlockingDeque<Task> tasks, AtomicInteger waitingPeriod) {
-        this.tasks = tasks;
-        this.waitingPeriod = waitingPeriod;
-    }*/
-
     public Server() {
         //initialize queue and waiting period
         this.tasks = new LinkedBlockingDeque<>();
@@ -24,10 +19,6 @@ public class Server implements Runnable {
         tasks.add(task);
         waitingPeriod.addAndGet(task.getServiceTime());
     }
-
-    /*public void removeTask() {
-        tasks.remove();
-    }*/
 
     public BlockingDeque<Task> getTasks() {
         return tasks;

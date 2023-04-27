@@ -59,8 +59,6 @@ public class Scheduler {
         Server selectedServer = strategy.selectServer(servers);
         selectedServer.addTask(task);
 
-        //System.out.println("Thread: " + Thread.currentThread().getName());
-
     }
 
     public List<Server> getServers() {
